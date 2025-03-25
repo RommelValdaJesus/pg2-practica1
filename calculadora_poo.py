@@ -11,26 +11,25 @@ class Calculadora:
         return f'{self.operacion}:{self. a} y {self.b} = {self.__resultado}'   
     
     def mostrar_operaciones(self):
-        return f'{self._sumar}\n{self._resta}\n{self._multiplicacion}\n{self._division}\n'
-    
+        return f'{self._sumar()}\n{self._restar()}\n{self._multiplicar()}\n{self._dividir()}\n'
 
     def _sumar(self):
         self.operacion = "sumar"
         self.__resultado = self.a + self.b
         return self._mostrar_operacion()
     
-    def _resta(self):
-        self.operacion = "resta"
+    def _restar(self):
+        self.operacion = "restar"
         self.__resultado = self.a - self.b
         return self._mostrar_operacion()
     
-    def _multiplicacion(self):
-        self.operacion = "multiplicacion"
+    def _multiplicar(self):
+        self.operacion = "multiplicar"
         self.__resultado = self.a * self.b
         return self._mostrar_operacion()
     
-    def _division(self):
-        self.operacion = "division"
+    def _dividir(self):
+        self.operacion = "dividir"
         self.__resultado = self.a / self.b
         return self._mostrar_operacion()
     
