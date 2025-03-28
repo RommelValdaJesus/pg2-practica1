@@ -37,7 +37,7 @@ class Calculadora:
     
 
 
-calculadora_1 = Calculadora(15, 5)
+calculadora_1 = Calculadora(15, 27)
 
 
 print(calculadora_1.mostrar_operaciones())
