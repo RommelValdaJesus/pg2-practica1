@@ -1,11 +1,9 @@
 
 # clase base que repressenta una calculadora simple (abstracción)
 class Calculadora:
-    def __init__(self, a, b):
+    def __init__(self):
         self.__resultado = 0
         self.operacion = ""
-        self.a = a
-        self.b = b
 
     def _mostrar_operacion(self):
         return f'{self.operacion}:{self. a} y {self.b} = {self.__resultado}'   
@@ -13,31 +11,28 @@ class Calculadora:
     def mostrar_operaciones(self):
         return f'{self._sumar()}\n{self._restar()}\n{self._multiplicar()}\n{self._dividir()}\n'
 
-    def _sumar(self):
+    def sumar(self, a, b):
         self.operacion = "sumar"
-        self.__resultado = self.a + self.b
-        return self._mostrar_operacion()
+        self.__resultado = a + b
+        return self.mostrar_resultado(a, b)
     
-    def _restar(self):
+    def restar(self,a, b):
         self.operacion = "restar"
-        self.__resultado = self.a - self.b
-        return self._mostrar_operacion()
+        self.__resultado = a - b
+        return self.mostrar_resultado(a, b)
     
-    def _multiplicar(self):
+    def _multiplicar(self, a, b):
+        return a * b
+    
+    def multiplicar(self, a, b):
         self.operacion = "multiplicar"
-        self.__resultado = self.a * self.b
-        return self._mostrar_operacion()
+        self.__resultado = self._multiplicar(a, b)
+        return self.mostrar_resultado(a, b)
     
-    def _dividir(self):
+    def dividir(self, a, b):
         self.operacion = "dividir"
-        self.__resultado = self.a / self.b
-        return self._mostrar_operacion()
+        self.__resultado = a / b
+        return self.mostrar_resultado(a, b)
     
-    
-    
-
-
-calculadora_1 = Calculadora(15, 27)
-
-
-print(calculadora_1.mostrar_operaciones())
+    def mostrar_resultado(self, a, b):
+        return f"El resultado de {self.operacion} entre {a}, {b} es {self.__resultado}"
