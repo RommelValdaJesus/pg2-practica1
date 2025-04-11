@@ -46,10 +46,31 @@ Desactivar el entorno virtual:
 ```sh
 deactivate
 ```
+## Uso
+### Implementación con `main`
+1. **Importa la clase** `CalculadoraFactorial`:
+   ```python
+   from calculadora_poo import CalculadoraFactorial
+   ```
+2. **Define el número y ejecuta la calculadora factorial** en un `main`:
+   ```python
+   if __name__ == "__main__":
+       calculadora_factorial = CalculadoraFactorial(5)
+       print(calculadora_factorial.calculadora())
+   ```
+3. **Ejecuta el código** y obtén el resultado del factorial en la terminal.
 
-## Implementación de la Calculadora Estándar  
+## Clases y Métodos
+## `Calculadora`
+Clase base que representa una calculadora simple con operaciones matemáticas como sumar, restar, multiplicar y dividir.
 
-Este módulo implementa una calculadora estándar que permite realizar operaciones aritméticas básicas.  
+Métodos importantes:
+
+- sumar(a, b): Retorna la suma de a y b.
+- restar(a, b): Retorna la resta de a y b.
+- multiplicar(a, b): Retorna la multiplicación de a y b.
+- dividir(a, b): Retorna la división de a entre b.
+- mostrar_resultado(a, b): Muestra el resultado de la operación.
 
 ### Modo de uso  
 
@@ -62,19 +83,8 @@ print(calculadora_1.restar(15, 8))
 print(calculadora_1.multiplicar(65, 6))  
 print(calculadora_1.dividir(565, 65))  
 ```
-## Clases y Métodos
-## Calculadora
-Clase base que representa una calculadora simple con operaciones matemáticas como sumar, restar, multiplicar y dividir.
-Métodos importantes:
-
-- sumar(a, b): Retorna la suma de a y b.
-- restar(a, b): Retorna la resta de a y b.
-- multiplicar(a, b): Retorna la multiplicación de a y b.
-- dividir(a, b): Retorna la división de a entre b.
-- mostrar_resultado(a, b): Muestra el resultado de la operación.
-
-CalculadoraFactorial
-Clase que extiende Calculadora para calcular el factorial de un número.
+### `CalculadoraFactorial`
+Clase que extiende `Calculadora` para calcular el **factorial** de un número.
 
 ## Métodos importantes:
 - calculadora(): Calcula el factorial del número proporcionado.
@@ -89,6 +99,9 @@ from factorial_poo import CalculadoraFactorial
 cal_factorial1 = CalculadoraFactorial(5)  
 print(cal_factorial1.calcular())  
 ```
+## Autor
+Este código fue desarrollado para ayudar a calcular el factorial de un número utilizando conceptos de **herencia en POO**.
+
 ## Licencia
 Este proyecto utiliza una Licencia MIT.
 
