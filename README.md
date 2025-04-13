@@ -1,5 +1,3 @@
-Aquí tienes tu README corregido con mejoras en la redacción y ortografía:
-
 ---
 
 # Práctica 1: Implementación de una Calculadora en Python  
